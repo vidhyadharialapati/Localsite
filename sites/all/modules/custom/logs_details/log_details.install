@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function log_details_schema() {
+  $schema = array();
+  $schema['nodeviewlog'] = array(
+    'description' => 'The count views of node for every user.',
+    'fields' => array(
+      'id' => array(
+        'description' => 'The unique ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'nid' => array(
+        'description' => 'The node ID.',
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+			'title' => array(
+        'description' => 'The node title.',
+        'type' => 'varchar',
+				'length' => '255',
+        'not null' => TRUE,
+      ),
+      'uid' => array(
+        'description' => 'The user ID who view of node.',
+        'type' => 'int',
+        'not null' => TRUE,
+      ),
+      'timestamp' => array(
+        'description' => 'The Unix timestamp when the node was view.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0, 
+      ),
+			'hostname' => array(
+        'description' => 'The hostname of the user who viewed the node.',
+        'type' => 'varchar',
+				'length' => '255',
+        'not null' => TRUE,
+        'default' => 0, 
+      ),
+    ),
+    'primary key' => array('id'),     
+  );
+  return $schema;
+}
+function log_details_install() {
+}
+function log_details_uninstall() {
+}

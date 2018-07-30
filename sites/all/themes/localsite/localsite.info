@@ -1,0 +1,25 @@
+name = Sample Layout theme
+description = A flexible, recolorable theme with many regions and a responsive, mobile-first layout.
+version = VERSION
+core = 7.x
+
+stylesheets[all][] = css/layout.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = css/colors.css
+stylesheets[print][] = css/print.css
+stylesheets[all][] = library/css/bootstrap.min.css
+stylesheets[all][] =  css/custom.css
+
+scripts[] = library/js/bootstrap.min.js
+scripts[] = js/custom.js
+
+regions[header] = Header
+
+regions[navigation] = navigation
+regions[content] = Content
+
+regions[prefooter_firstcolumn] = Footer first column
+regions[prefooter_secondcolumn] = Footer second column
+regions[footer] = Footer
+
+settings[shortcut_module_link] = 0

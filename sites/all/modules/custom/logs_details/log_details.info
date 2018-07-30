@@ -1,0 +1,4 @@
+name = Logs Details
+description = Node view details
+core = 7.x
+package = Custom

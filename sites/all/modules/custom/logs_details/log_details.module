@@ -1,0 +1,59 @@
+<?php
+/**
+ * Implements hook_node_view().
+ */
+function log_details_node_view($node, $view_mode, $langcode) {
+	global $user;
+	if (!empty($node->nid) && $view_mode == 'full' && node_is_page($node) && empty($node->in_preview)) {
+		db_insert('nodeviewlog')
+		->fields(array(
+			'nid' => $node->nid,
+			'title' => check_plain(trim($node->title)),
+			'uid' => $user->uid,				  				  			  
+			'timestamp' => time(),
+			'hostname' => ip_address(),
+		))->execute();
+	}
+}
+
+/**
+ * Implements hook_menu().
+ */
+function log_details_menu() {
+	$items['node/%node/log'] = array(
+    'title' => 'Logs',
+    'page callback' => 'logs_tracker',
+    'page arguments' => array(1),
+    'access callback' => 'node_access',
+    'access arguments' => array('view', 1),
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 2,
+  );
+  return $items;
+}
+
+function logs_tracker($node){
+    $query = db_select('nodeviewlog', 'a');
+    $query
+      ->fields('a', array('timestamp', 'title', 'hostname','nid'))
+			->condition('a.nid', $node->nid)
+      ->orderBy('timestamp','desc');
+    $result = $query->execute()->fetchAll();
+    $rows = array();
+   foreach ($result as $log) {
+      $rows[] = array(
+				l(t($log->title), "node/".$log->nid),
+        array('data' => format_date($log->timestamp, 'short'), 'class' => array('nowrap')),
+				$log->hostname
+      );
+    }
+		$rows[] = array('');
+		$rows[] = array('Count',count($result));
+    $build['logs_table'] = array(
+      '#theme' => 'table',
+      '#rows' => $rows,
+      '#empty' => t('No logs available.'),
+    );
+    $build['logs_pager'] = array('#theme' => 'pager');
+    return $build;
+}

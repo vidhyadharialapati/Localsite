@@ -1,0 +1,217 @@
+html { font-family: Helvetica, Arial, Sans-Serif; }
+
+body { background-color: #ffffff; font-family: Helvetica, Arial, Sans-Serif; font-weight: normal; font-size: 12px; color: #575757; -webkit-font-smoothing: antialiased; }
+
+table{font-family: Helvetica, Arial, Sans-Serif; font-weight: normal; font-size: 12px;}
+a, a:hover{color: #5D6D2E;}
+.breadcrumbs{
+	margin-bottom: 1em;
+}
+#main-wrapper{
+	padding-top: 1.3846em;
+  padding-bottom: 1.3846em;
+}
+#page-title{
+	color: #3e3d3d;
+	font-family: Sans-Serif;
+	font-size: 1.3846em !important;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.header-image{
+	width: 100%;
+	border: 15px solid #FFFFFF;
+	height: 310px;
+}
+.page-header{
+	border: 5px;
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.bottom-left {
+	left: 16px;
+	position: absolute;
+	bottom: 16px;
+	background-color: #000000;
+	width: 96.77%;
+	text-align: left;
+	height: 82px;
+	z-index: 1000;
+  opacity: 0.8;
+}
+.site_name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+		padding: 0;
+		margin: 0;
+}
+.event_location {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.event_date {
+    font-size: 18px;
+    font-weight: normal;
+    color: #ffffff;
+}
+.img-text{
+	padding: 9px;
+}
+.header{
+	background: #C8CD7D !important;
+	
+}
+.page-header {
+  background-color: white;
+}
+.main-menu-row{
+	margin-left: 0;
+}
+.header .container{
+	padding-top: 17px;
+	padding-bottom: 1%;
+}
+.header-bar{
+	border-bottom: 1px solid #FFFFFF;
+  height: 27px;
+  width: 100%;
+	background-color: #5D6D2E;
+}
+#space_over {
+	background-color: #EFEFEF;
+	margin: 0 auto;
+	position: relative;
+}
+#space {
+	background-repeat: no-repeat;
+	height: 29px;
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+}
+.footer-wrapper .Footer-text {
+	color: #555555;
+	display: inline-block;
+	font-size: 12px;
+	line-height: 40px;
+}
+.footer-wrapper {
+	background-color: #F3F3F3;
+}
+.footer-wrapper .footer {
+  text-align: center !important;
+}
+.footer {
+	margin: 0 auto;
+	text-align: left;
+	width: 960px;
+}
+#build-with-gsi {
+	border-top: 1px solid #FFFFFF;
+	padding: 10px;
+}
+.front #page-title, #first-time{
+	display: none;
+}
+.container{
+	padding-left: 90px;
+	padding-right:90px;
+}
+@media (min-width: 1025px) and (max-width: 1280px){
+.container{
+	padding-left: 125px;
+	padding-right:125px;
+}
+}
+@media (min-width: 320px) and (max-width: 1024px) {
+.container{
+	padding-left: 15px;
+	padding-right:15px;
+	margin: 0;
+	max-width:unset;
+}
+}
+.navigation{
+	background-color: #D8D8D8;
+}
+.navigation #main-menu-links {
+  padding: 8px 0 0;
+}
+.views-slideshow-cycle-main-frame-row , .views-slideshow-cycle-main-frame , .views-slideshow-cycle-main-frame-row, #block-views-image-slider-block img {
+	margin: 0 auto;
+	width: 711px;
+	height: auto;
+}
+.views-slideshow-pager-fields{
+	margin: 0 auto;
+	width: 60px;
+}
+.front #main-wrapper .block + .block {
+  margin-top: 1.5em;
+}
+#block-block-1 h2,#block-views-speakers-block h2,#block-views-latest-news-block h2{
+	color: #3e3d3d;
+	font-family: Sans-Serif;
+	font-size: 1.3846em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.speaker-img{
+	float:left;
+	width:30%;
+	overflow:hidden;
+}
+.speaker-img img,.node-type-speaker .field-name-field-image img{
+	border: 2px solid #bbbbbb;
+	padding: 2px;
+}
+.node-type-speaker .field-name-field-job-title, .node-type-speaker .field-name-field-company, .node-type-speaker .field-name-field-country{
+	font-weight:bold;
+}
+.node-type-article .field-name-body{
+	padding-top: 8px;
+}
+.page-speakers .speaker-img{
+	width:15%;
+}
+.views_slideshow_pager_field .views_slideshow_pager_field_item {
+  background: #CCC;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  margin: 2px;
+  border-radius: 50%;
+  float: left;
+}
+.views_slideshow_pager_field .views_slideshow_pager_field_item a {
+	color: transparent;
+}
+.views-slideshow-controls-bottom{
+	padding-top:5px;
+}
+.speaker-details{
+	float:left;
+	width:25%;
+	overflow:hidden;
+}
+.content table  tr{
+	background: transparent;
+}
+.view-id-speakers  td, .view-latest-news  td{
+	padding:0;
+}
+.page-news .view-latest-news .views-field-created,.page-news .view-latest-news .views-field-title{
+	width: 150px;
+	vertical-align: text-top;
+}
+.view-latest-news .views-field-created{
+	font-weight: bold;
+}
+.speaker-title{
+	font-weight:bold;
+	font-size:14px;
+}

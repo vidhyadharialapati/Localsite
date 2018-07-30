@@ -1,0 +1,4 @@
+name = Local Site Custom
+description = Use for site-wide customizations
+core = 7.x
+package = Custom
