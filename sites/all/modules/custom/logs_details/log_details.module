@@ -48,7 +48,7 @@ function logs_tracker($node){
       );
     }
 		$rows[] = array('');
-		$rows[] = array('Count',count($result));
+		$rows[] = array('Total Hit Count',count($result));
     $build['logs_table'] = array(
       '#theme' => 'table',
       '#rows' => $rows,
